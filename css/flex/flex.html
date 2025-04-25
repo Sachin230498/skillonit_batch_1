@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 10px solid red;
+            display: flex;
+        }
+
+        #box div{
+            height: 200px;
+
+        }
+
+        #box div:nth-child(1){
+          background-color: aqua;
+        }
+        #box div:nth-child(2){
+          background-color: rgb(0, 0, 255);
+        }
+        #box div:nth-child(3){
+          background-color: rgb(255, 47, 0);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
