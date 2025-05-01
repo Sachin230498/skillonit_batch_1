@@ -1,45 +1,152 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 55</title>
     <style>
-       #navbar{
-         border: 2px solid;
-         display: flex;
-         justify-content: space-between;
-       }
+      #navbar {
+        /* border: 2px solid; */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
 
-       img{
-         background-color: black;
-       }
+      img {
+        background-color: black;
+        width: 200px;
+        margin-left: 60px;
+      }
 
-       .content{
-         display: flex;
-         width: 50%;
-         justify-content: space-around;
-         border: 3px solid green;
-       }
+      .content {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        /* border: 3px solid green; */
+        margin-right: 40px;
+      }
+
+      #main {
+        /* height: 500px; */
+        /* border: 5px solid; */
+
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+      }
+      #main>div {
+        width: 50%;
+        height: 100%;
+        /* border: 2px solid red; */
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      #inner {
+        height: 100px;
+        width: 100%;
+        border: 2px solid green;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .car{
+        margin: 0;
+      }
+
+      #left{
+        padding: 20px 30px;
+      }
+      #right{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2,300px);
+        gap: 20px;
+      }
+
+      #right>div{
+        text-align: center;
+        /* border: 2px solid; */
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         padding: 20px;
+      }
+      #right>div>img{
+        margin: 0;
+       width: 100px;
+      }
+     
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="navbar">
+      <img
+        src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+        alt=""
+      />
 
-<div id="navbar">
-    
-     <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="">
-    
-  
-  
-    <div class="content">
+      <div class="content">
         <h3>Home</h3>
         <h3>Home</h3>
         <h3>Home</h3>
         <h3>Home</h3>
         <h3>Home</h3>
+      </div>
     </div>
-  
-</div>
-   
-    
-</body>
+
+    <div id="main">
+      <div id="left">
+        <h3 style="color: blue">Welcome to studylab</h3>
+        <h1 style="font-size: 40px">
+          We are study lab an online leraning center
+        </h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          aspernatur aliquid accusamus! Aperiam id, numquam laudantium harum
+          labore excepturi ullam corporis! Molestiae magnam rerum voluptatibus
+          temporibus eius adipisci esse vero.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+          doloremque voluptate sequi deleniti nesciunt, dolores voluptatem
+          fugiat minima aliquid, velit pariatur. Minus tenetur adipisci
+          obcaecati saepe accusantium tempora aspernatur sit.
+        </p>
+
+        <div id="inner">
+          <img
+            class="car"
+            src="https://media.istockphoto.com/id/494522939/photo/luxury-car-in-chicago.jpg?s=2048x2048&w=is&k=20&c=5VhwncqK6yir_lPkGxyQrhVT9gmVqL2A-Kq82eNl8h0="
+            alt=""
+          />
+          <p>Hello how are you Hello how are you</p>
+        </div>
+      </div>
+
+      <div id="right">
+        <div>
+          <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839934/1725624413059.png" alt="">
+         <h2>Top quality Content</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+          <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839934/1725624413059.png" alt="">
+         <h2>Top quality Content</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+          <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839934/1725624413059.png" alt="">
+         <h2>Top quality Content</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+          <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2839934/1725624413059.png" alt="">
+         <h2>Top quality Content</h2>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
