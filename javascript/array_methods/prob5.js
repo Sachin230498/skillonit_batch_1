@@ -13,12 +13,27 @@
 // 2nd parameter is ending index 
 //it return new array
 
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 
-let abc = arr.slice(2,5)
+// let abc = arr.slice(2,5)
 
-console.log(abc)
+// console.log(abc)
 
+
+
+
+
+
+
+
+
+
+
+let str = ["amol", "vaibhav", "gaurav", "harsh", "parth", "vivek"]
+
+let name = str.splice(1,2 ,"sachin")
+
+console.log(str)
 
 
 

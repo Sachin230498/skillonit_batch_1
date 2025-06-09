@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="enter your name">
+    <button id="data" onclick="getData()">Click me</button>
+
+    <h1 id="getname"> </h1>
+</body>
+<script>
+    let name = document.getElementById("name");
+    let getname = document.getElementById("getname")
+
+    function getData(){
+        getname.innerText = "My name is - " +  name.value;
+        // console.log(getname)
+    }
+
+
+</script>
+</html>
