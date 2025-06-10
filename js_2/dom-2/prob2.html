@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The Document Object</h1>
+    <h1>The getElementsByTagName() Method</h1>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <p>I am p1</p>
+    <p>I am p2</p>
+    <div>I am box</div>
+  </body>
+</html>
+
+<script>
+    let abc = document.getElementsByTagName("h1")
+    // console.log(h1)
+
+    for(let i=0;i<abc.length;i++){
+        abc[i].style.color = "blue";
+    }
+
+    // abc.map(function(el){
+    //    el.style.color = "blue"
+    // })
+
+
+</script>

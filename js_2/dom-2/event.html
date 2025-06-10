@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event</h1>
+
+
+    <h2>Change the color</h2>
+
+    <div>
+        <h1 id="hello">Hello</h1>
+        <button >click</button>
+    </div>
+
+    
+</body>
+<script>
+    // document.addEventListener()
+    let head = document.querySelector("h1")
+    let head2 = document.querySelector("h2")
+    let btn = document.querySelector("button")
+
+    let hello = document.getElementById("hello")
+    console.log(btn)
+
+    btn.addEventListener("click", abc)
+
+
+    function abc(){
+        // alert("clicked me")
+        // console.log(event.target.parentNode)
+
+        let x =  event.target 
+        console.log(x)
+        
+        hello.innerText = "now button is clicked by - " + x + "element"
+
+    }
+
+
+
+    // head.addEventListener("mouseover" ,colorchange)
+    // head.addEventListener("mouseout" ,color)
+
+
+    // function colorchange(){
+    //     head2.style.color = "red";
+    // }
+    // function color(){
+    //     head2.style.color = "black";
+    // }
+</script>
+</html>
