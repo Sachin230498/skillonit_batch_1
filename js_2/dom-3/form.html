@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="show"></h1>
+    <form
+      style="
+        border: 2px solid red;
+        width: 400px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 200px;
+      "
+    >
+      <input id="name" type="text" placeholder="Enter your name" />
+      <br />
+      <input id="pass" type="password" placeholder="Enter you password" />
+      <br />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+  <script>
+    let form = document.querySelector("form");
+    // let name = document.getElementById("name");
+    // let pass = document.getElementById("pass");
+
+    form.addEventListener("submit", function () {
+      event.preventDefault();
+      //   console.log(name.value)
+      //   console.log(pass.value)
+      console.log(form.name.value);
+      console.log(form.pass.value);
+    });
+  </script>
+</html>
