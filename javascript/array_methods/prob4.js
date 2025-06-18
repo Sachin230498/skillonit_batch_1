@@ -8,6 +8,6 @@ let arr = [1,2,3,4,5,6]
 // 2nd parameter is for how many elements you want to delete
 // 3rd is for elements you want to add
 
-//  arr.splice(0,2,true, 12,34,55)
+//  arr.splice(1,1)
 
-//  console.log(arr)
+//  console.log(arr) //  

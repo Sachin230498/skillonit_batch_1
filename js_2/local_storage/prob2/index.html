@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+</body>
+<script>
+    // JSON, which stands for JavaScript Object Notation, is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language Standard. JSON is commonly used for transmitting data in web applications and is often used when data is sent from a server to a web page. 
+
+    // JSON.stringify()
+    // JSON.parse()
+
+let arr1 = [1,7,9,10]
+
+let x = JSON.stringify(arr1)  // "[1,7,9,10]"
+let c = JSON.parse(x)
+console.log(c)
+
+let obj1 = { name:"chunnu",
+             surname:"sharma"
+}
+
+let y = JSON.stringify(obj1)  // "{"name":"chunnu","surname":"sharma"}"
+
+let z = JSON.parse(y)
+console.log(z)
+
+    
+
+    let arr = [1,2,34,578,456];
+    // console.log(arr)
+
+    // localStorage.setItem("array", arr)  //  "1" "2" "34" "578" "456"
+
+
+    // let a = localStorage.getItem("array");
+    // console.log(a) 
+
+
+    // let obj = {
+    //     a:"Rahul",
+    //     b:"kumar"
+    // }
+
+    // localStorage.setItem("data", obj)
+
+    // let b = localStorage.getItem("data")
+    // console.log(b)
+</script>
+</html>
