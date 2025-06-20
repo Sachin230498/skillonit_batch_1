@@ -267,41 +267,92 @@ let data = [
   },
 ];
 
-
+let cart_arr = JSON.parse(localStorage.getItem("cartData")) || [];
 let main = document.getElementById("main");
-display()
+let cred = document.getElementById("cred");
+let log = document.getElementById("log");
 
+let loginuser = JSON.parse(localStorage.getItem("loginuser"));
+// console.log(loginuser)
 
-function display(){
+// let a= 5;
 
-data.map(function(el){
-console.log(el.category)
- let title = document.createElement("h2");
- title.innerText = el.title
- let price = document.createElement("h3");
- price.innerText = el.price;
- let image = document.createElement("img");
- image.src = el.image;
- let description = document.createElement("p")
- description.innerText = el.description
- let addcartbtn  = document.createElement("button")
- addcartbtn.innerText = "Add to Cart"
-
- let div = document.createElement("div")
- div.append(image, title, price, addcartbtn)
-main.append(div)
-
-})
-
+if (loginuser != null) {
+  log.style.display = "none";
+  let name = document.createElement("h4");
+  let cartbtn = document.createElement("button");
+  cartbtn.addEventListener("click", function () {
+    window.location.href = "../html/cart.html";
+  });
+  cartbtn.innerText = "Cart";
+  let logout = document.createElement("button");
+  logout.addEventListener("click", outfun);
+  logout.innerText = "logout";
+  name.innerText = loginuser;
+  cred.append(name, cartbtn, logout);
+} else {
+  console.log("not availble");
 }
 
+function outfun() {
+  // console.log("logout")
+  localStorage.removeItem("loginuser");
+  window.location.reload();
+}
+
+// if(!loginuser == ""){  // false == false
+//   console.log("hello")
+// }else{
+// console.log("not")
+// }
+
+// console.log(cred)
+display();
+
+function display() {
+  data.map(function (el) {
+    // console.log(el.category)
+    let title = document.createElement("h2");
+    title.innerText = el.title;
+    let price = document.createElement("h3");
+    price.innerText = el.price;
+    let image = document.createElement("img");
+    image.src = el.image;
+    let description = document.createElement("p");
+    description.innerText = el.description;
+    let addcartbtn = document.createElement("button");
+    addcartbtn.addEventListener("click", function () {
+      addcartfun(el);
+    });
+    addcartbtn.innerText = "Add to Cart";
+
+    let div = document.createElement("div");
+    div.append(image, title, price, addcartbtn);
+    main.append(div);
+  });
+}
+
+function addcartfun(cartvalue) {
+  // console.log("cart added")
+  // console.log(cartvalue)
+  let flag = false;
+  cart_arr.map(function (el) {
+    if(el == cartvalue){
+     flag = true
+    }
+  });
 
 
+  if(flag == true){
+    alert("product is already added")
+  }else{
+    cart_arr.push(cartvalue);
+    alert("product is added to cart");
+    localStorage.setItem("cartData", JSON.stringify(cart_arr));
+  }
 
-
-
-
-
+ 
+}
 
 // let arr = [12,45,78,95,86,23];
 
@@ -313,7 +364,6 @@ main.append(div)
 //     // console.log(array)
 //     return el*2
 // })
-
 
 // let y = arr.forEach(function (el, index, array) {
 //   console.log(el*2)
