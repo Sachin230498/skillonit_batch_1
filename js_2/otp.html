@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OTP</h1>
+
+    <div id="main">
+       
+    </div>
+    
+</body>
+<script>
+    // let a =  Math.random() * 10000
+    // // console.log( a.toPrecision(4) )
+    //   console.log(Math.floor(a))
+
+    let main = document.getElementById("main")
+    // console.log(main);
+
+    let input = document.createElement("input");
+    
+    let btn = document.createElement("button")
+    btn.addEventListener("click", checkotp)
+    btn.innerText = "Submit"
+    let br = document.createElement("br")
+    let btn2 = document.createElement("button")
+    btn2.addEventListener("click", getOtp)
+    btn2.innerText = "Get Otp"
+    // btn.disabled = true
+
+    main.append(input,btn,br,btn2)
+    
+    let check;
+
+    function getOtp(){
+        let a =  Math.floor( Math.random() * 10000)
+        check = a;
+        alert(a)
+    }
+
+
+    function checkotp(){
+        // console.log(check)
+        if(input.value == check){
+            alert("correct")
+            window.location.href = "./order.html"
+        }else{
+            alert("wrong otp")
+        }
+    }
+</script>
+</html>
