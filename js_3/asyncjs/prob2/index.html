@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #slider>img{
+            width: 500px;
+            height: 350px;
+        }
+
+        button{
+            width: 200px;
+            font-size: 35px;
+        }
+    </style>
+  </head>
+  <body>
+    <a href="./store.html">Store</a>
+    <div id="slider"></div>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+  </body>
+  <script>
+     let data = JSON.parse(localStorage.getItem("img_data"))
+     let div = document.getElementById("slider")
+
+
+   
+     let count = 0;
+
+     function display(){
+        div.innerHTML = ""
+        let image = document.createElement("img")
+        image.src = data[count]
+        if(count==data.length-1){
+            count=0
+        }else{
+        count++;
+        }
+        div.append(image)   
+     }
+
+     let x ;
+
+     function start(){
+    x = setInterval(display,1000)
+     }
+
+
+     function stop(){
+        clearInterval(x)
+     }
+
+    const now = new Date();
+    const hours = now.getHours();       // Returns the hour (0-23)
+    const minutes = now.getMinutes();   // Returns the minute (0-59)
+    const seconds = now.getSeconds();   // Returns the second (0-59)
+
+    console.log(`Current time: ${hours}:${minutes}:${seconds}`);
+  </script>
+</html>
