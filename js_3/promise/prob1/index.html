@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+</body>
+<script>
+    // Promise
+
+    // syntex 
+    // new Promise(function(resolve, reject){
+    // })
+    //resolve -fullfilled state
+    //reject - failure state
+
+    let promise = new Promise(function(res,rej){
+
+        let data = false;
+        if(data){
+            res("data fullfilled")
+        }else{
+            rej("getting error")
+        }
+
+    })
+
+    // console.log(promise)
+
+    // How to handle result
+    // .then   - resolve
+    // .catch - error
+
+    promise.then(function(res){
+        console.log(res)
+    }).catch(function(err){
+        console.log("err- ", err)
+    })
+
+
+
+</script>
+</html>
