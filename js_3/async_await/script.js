@@ -58,7 +58,6 @@ async function getData (){
     } catch (error) {
         console.log(error)
     }
-  
 }
 
 
