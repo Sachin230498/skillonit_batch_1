@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resta_data_list{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2px;
+            margin-top: 50px;
+        }
+
+         #resta_data_list>div{
+            border: 2px solid;
+            gap: 20px;
+         }
+         #resta_data_list>div>img{
+            width: 250px;
+            height: 250px;
+         }
+
+    </style>
+</head>
+<body>
+    <h1>Resta Data Manage</h1>
+
+    <input id="name" type="text" placeholder="enter your dish name">
+    <br>
+    <br>
+    <input id="price" type="text" placeholder="enter your dish price">
+    <br><br>
+    <input id="img" type="text" placeholder="enter your dish img">
+    <br><br>
+    <button onclick="adddish()">Add Dish</button>
+
+    <hr>
+    <div id="resta_data_list"></div>
+</body>
+<script src="./index.js"></script>
+</html>
