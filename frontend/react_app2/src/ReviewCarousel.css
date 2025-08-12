@@ -1,0 +1,61 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 220px;
+  max-width: 300px;
+  width: 260px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.review-content {
+  font-size: 14px;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #0071e3;
+}
+
+.review-role {
+  color: gray;
+  font-size: 12px;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.heart-icon {
+  color: red;
+  font-size: 0.8rem;
+}
