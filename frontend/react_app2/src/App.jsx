@@ -1,21 +1,22 @@
-import Todo from "./component/todo/Todo";
 
-function App() {
- 
+import React from 'react'
+import Prob2 from './component/hooks/useEffect/Prob2'
+import Fetch from './component/hooks/useEffect/Fetch'
+import "./App.css";
 
+
+const App = () => {
   return (
     <div>
-      <h1>
-        Todo App
-      </h1>
-      <Todo/>
-  
+
+   <Fetch/>
+
+
     </div>
-  );
+  )
 }
 
-export default App;
-
+export default App
 
 
 // JSX - Javascript  XML , ek syntex hai jo React me use hota h, HTML Jaise lgta hai , lekin js ke andr likhte

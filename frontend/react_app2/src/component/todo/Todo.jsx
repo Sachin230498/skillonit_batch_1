@@ -1,52 +1,39 @@
-import React, {useState} from 'react';
+import React,{useState} from 'react'
+import Addtodo from './Addtodo'
+import Todolist from './Todolist'
 
 const Todo = () => {
- const [text, setText] = useState("")
- const [todo, setTodo] = useState([])
+  const [text, setText] = useState("")
+  const [todos,setTodos] = useState([])
 
- const handleAddTodo = ()=>{
 
+
+  const handleAddTodo = ()=>{
+    // console.log("hello")
     const newItem = {
-      title: text,
-      status: false,
-      id: Math.floor(Math.random(11) * 100),
-    };
+      id:Math.floor(Math.random()*1000),
+      title:text,
+      status:false
+    }
 
-    // todo.push(newItem)
-
-    setTodo([...todo,newItem])
-    console.log(todo)
- }
+    setTodos([...todos, newItem])
+    // console.log(todos)
+    setText("")  //clear input
+  }
+  
 
 
   return (
     <div>
-      {/* addtodo component */}
-      <input
-        value={text}
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
-        type="text"
-        placeholder="enter your task"
-      />
-      <button onClick={handleAddTodo}>Add</button>
 
-      {/* Todo item component */}
-      <div>
-        <h2>Todo Items</h2>
-        <ul>
-          {todo.map((el) => (
-            <>
-              <li key={el.id} >{el.title} {"   ---->   "} {el.status ? "Completed" : "Not Completed" }</li>
-         
-            </>
-          ))}
-        </ul>
-      </div>
+
+      <Addtodo  text={text} handlechange={handleAddTodo} setText={setText}/>
+
+      {/* Todo List */}
+      <Todolist todos={todos} setTodos={setTodos} />
+     
     </div>
   );
-
 }
 
 export default Todo

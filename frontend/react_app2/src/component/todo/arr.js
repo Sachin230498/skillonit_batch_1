@@ -21,4 +21,32 @@
 
 // syntex condition ? true statement : false statement
 
-5==5 ? console.log("hello") : console.log("bye")
+// 5==5 ? console.log("hello") : console.log("bye")
+
+
+// let obj = {
+//     a :7,
+//     b:10
+// }
+
+
+
+
+
+// let obj2 = {...obj, a:15}
+
+// console.log(obj2)
+
+
+
+let arr = [1,2,3,4,5]
+
+let a = arr.map((el)=>{
+    console.log(el*2)
+})
+
+let b = arr.forEach((el) => {
+  console.log( el * 2);
+});
+
+
