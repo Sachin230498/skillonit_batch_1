@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="head"></h1>
+   <button onclick="incfun()">increse</button>
+</body>
+<script>
+    let head = document.getElementById("head")
+let count = 0;
+head.innerText = count
+
+  const incfun = ()=>{
+      count++;
+      head.innerText = count
+  }
+</script>
+</html>
