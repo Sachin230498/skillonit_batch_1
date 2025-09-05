@@ -1,0 +1,25 @@
+// Imagine you have a React app with many components.
+
+// You want to share data (like theme, user info, or language) across these components.
+
+// Without Context, you’d have to pass props manually through every level (prop drilling), which is messy.
+
+// // 💡 Context API solves this by creating a central store of data that any component can access directly, without passing props through every level.
+
+
+// 🛠 Key Parts of Context API
+// Part	What it does
+// 1. createContext()	Creates a new context (like a “box” to store data).
+// 2. Provider	A component that provides the data to all child components.
+// 3. useContext()	A hook to consume the data inside any component.
+
+
+
+// 🔑 Key Fixes:
+
+// ✅ Use children prop (not Children).
+// ✅ Use <MyContext.Provider> not <DataProvider.Provider>.
+// ✅ Keep context variable name consistent (MyContext).
+// ✅ Wrap components with <DataProvider> in App.js.
+
+
