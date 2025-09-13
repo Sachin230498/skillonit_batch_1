@@ -1,12 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Child1 from "./component/props/Child1.jsx";
+import UserCrud from "./component/UserCrud.jsx";
 
 function App() {
-  let name = "Harsh";
+
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <h1>Hello I am react app</h1>
+      <UserCrud/>
+
     </div>
   );
 }

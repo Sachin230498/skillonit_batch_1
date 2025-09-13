@@ -73,3 +73,14 @@ function display(data) {
     main.append(div);
   });
 }
+
+
+
+// CRUD
+
+// c =>create => post request
+// R =>Read   => get request
+// U =>Update => put/patch request
+// D =>Delete => Delete request
+
+

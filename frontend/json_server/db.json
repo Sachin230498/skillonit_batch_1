@@ -1,10 +1,4 @@
 {
-  "users": [
-    {
-      "id": "f16b",
-      "name": "ritesh",
-      "email": "r@gmail.com",
-      "password": "123456"
-    }
-  ]
+  "users": [],
+  "products": []
 }

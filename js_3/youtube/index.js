@@ -5,7 +5,7 @@ let main = document.getElementById("main")
 let search = document.getElementById("search");
 
 const getData = async ()=>{
-    let res = await fetch(`${api}&q=${search.value}`);
+    let res = await fetch(`${api}&q=rrr`);
     // console.log(res.json())
     let data = await res.json()
     // console.log(data.items)
@@ -13,6 +13,8 @@ const getData = async ()=>{
     console.log(x)
     // display(x);
 }
+
+getData()
 
 
 const display = (data)=>{

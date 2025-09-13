@@ -1,6 +1,6 @@
-const addhead = ()=>{
-     return "<h1>Hello</h1>";
- 
-}
+// addhead.js
+const addhead = () => {
+  return "<h1>Hello</h1>";
+};
 
-export default addhead();
+export default addhead;

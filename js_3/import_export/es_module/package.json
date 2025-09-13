@@ -1,0 +1,13 @@
+{
+  "name": "es_module",
+  "version": "1.0.0",
+  "description": "its for learning purpose",
+  "main": "prob1.js",
+  "type": "module",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
