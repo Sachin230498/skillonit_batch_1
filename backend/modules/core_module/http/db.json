@@ -1,0 +1,7 @@
+{
+    "user":[
+        {"id":1, "name":"Sachin", "role":"trainer"},
+        {"id":2, "name":"Aman", "role":"student"}
+    ],
+    "product":[]
+}
