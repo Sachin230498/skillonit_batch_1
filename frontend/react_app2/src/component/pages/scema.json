@@ -1,0 +1,148 @@
+{
+  "MustHave": {
+    "Restaurants": {
+      "id": "UUID",
+      "name": "String",
+      "address": "String",
+      "phone": "String",
+      "email": "String",
+      "logo_url": "String",
+      "status": "String"
+    },
+    "Users": {
+      "id": "UUID",
+      "email": "String",
+      "name": "String",
+      "password": "String",
+      "role": "String"
+    },
+    "Categories": {
+      "id": "UUID",
+      "restaurant_id": "UUID",
+      "name": "String",
+      "dishes": [
+        {
+          "id": "UUID",
+          "name": "String",
+          "price": "Number",
+          "image_url": "String",
+          "rating": "Number",
+          "is_available": "Boolean",
+          "description": "String",
+          "variants": "Array of Variants (optional)",
+          "addons": "Array of Addons (optional)"
+        }
+      ]
+    },
+    "Orders": {
+      "id": "UUID",
+      "user_id": "UUID",
+      "restaurant_id": "UUID",
+      "order_items": "Array of OrderItems",
+      "total_amount": "Number",
+      "status": "String"
+    },
+    "OrderItems": {
+      "id": "UUID",
+      "order_id": "UUID",
+      "menu_item_id": "UUID",
+      "quantity": "Number",
+      "unit_price": "Number"
+    },
+    "Payments": {
+      "id": "UUID",
+      "order_id": "UUID",
+      "amount": "Number",
+      "payment_method": "String",
+      "status": "String"
+    }
+  },
+  "NiceToHave": {
+    "VariantsAndAddOns": {
+      "id": "UUID",
+      "menu_item_id": "UUID",
+      "type": "String",
+      "name": "String",
+      "price": "Number"
+    },
+    "Reviews": {
+      "id": "UUID",
+      "user_id": "UUID",
+      "restaurant_id": "UUID",
+      "dish_id": "UUID",
+      "rating": "Number",
+      "comment": "String",
+      "created_at": "DateTime"
+    },
+    "Reservations": {
+      "id": "UUID",
+      "user_id": "UUID",
+      "restaurant_id": "UUID",
+      "table_id": "UUID",
+      "reservation_time": "DateTime",
+      "status": "String"
+    },
+    "FloorsAndTables": {
+      "floors": [
+        {
+          "id": "UUID",
+          "restaurant_id": "UUID",
+          "name": "String",
+          "tables": [
+            {
+              "id": "UUID",
+              "name": "String",
+              "seats": "Number"
+            }
+          ]
+        }
+      ]
+    },
+    "UserActivity": {
+      "last_login": "DateTime",
+      "permissions": "Array of Strings",
+      "roles": "Array of Strings"
+    }
+  },
+  "Advanced": {
+    "KitchenOperations": {
+      "kitchen_tickets": {
+        "id": "UUID",
+        "order_id": "UUID",
+        "status": "String",
+        "items": "Array of MenuItems"
+      }
+    },
+    "Inventory": {
+      "inventory_items": {
+        "id": "UUID",
+        "name": "String",
+        "quantity": "Number",
+        "unit": "String"
+      },
+      "stock_movements": {
+        "id": "UUID",
+        "inventory_item_id": "UUID",
+        "type": "String",
+        "quantity": "Number",
+        "timestamp": "DateTime"
+      }
+    },
+    "DailyAnalytics": {
+      "daily_sales": {
+        "date": "Date",
+        "restaurant_id": "UUID",
+        "total_orders": "Number",
+        "total_revenue": "Number"
+      }
+    },
+    "CustomerLoyalty": {
+      "customers": {
+        "id": "UUID",
+        "user_id": "UUID",
+        "points": "Number",
+        "tier": "String"
+      }
+    }
+  }
+}
