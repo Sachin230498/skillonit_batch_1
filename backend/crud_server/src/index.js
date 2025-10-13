@@ -1,15 +1,20 @@
 import express from "express"
 import connectDB from "./config/db.js";
-import normalRoute from "./routes/normalRoute.js"
 import userRouter from "./routes/userRoutes.js"
+import dotenv from "dotenv";
+
+dotenv.config();
+
+let mongo_url = process.env.Mongo_Url;
+let PORT = process.env.PORT || 8000
 
 const app = express()
 app.use(express.json())
-const PORT = 8085;
 
-connectDB()
 
-app.use("/user", normalRoute)
+connectDB(mongo_url)
+
+
 
 app.use("/user",userRouter)
 
