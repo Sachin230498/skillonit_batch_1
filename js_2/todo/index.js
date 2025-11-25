@@ -1,42 +1,33 @@
-let form  = document.querySelector("form");
+let form = document.querySelector("form");
 let tbody = document.querySelector("tbody");
-form.addEventListener("submit", getData)
+let task = document.getElementById("task");
+let priority = document.getElementById("priority");
 
-let todo_arr = [];
+form.addEventListener("submit", getData);
 
-function getData(){
-    event.preventDefault();
-    // console.log("hello")
-    let task = form.task.value;
-    let priority = form.priority.value;
+function getData() {
+  event.preventDefault();
 
-   let todo_obj = {
-    task,
-    priority
-   }
+  let row = document.createElement("tr");
+  let col1 = document.createElement("td");
+  let col2 = document.createElement("td");
+  let col3 = document.createElement("td");
 
-   todo_arr.push(todo_obj)
-   display(todo_arr)
+  col1.innerText = task.value;
+  col2.innerText = priority.value;
+
+  if (priority.value == "High") {
+    col2.style.backgroundColor = "red";
+    col2.style.color = "white";
+  } else if (priority.value == "Low") {
+    col2.style.backgroundColor = "green";
+    col2.style.color = "white";
+  }
+
+  col3.innerText = "Delete";
+  col3.style.backgroundColor = "red";
+  col3.style.color = "white";
+
+  row.append(col1, col2, col3);
+  tbody.append(row);
 }
-
-
-function display(data){
-
-    tbody.innerHTML = "";
-
-    for (let i = 0; i < data.length; i++) {
-      //   console.log(data[i])
-      let row = document.createElement("tr");
-      let col1 = document.createElement("td");
-      col1.innerText = data[i].task;
-      let col2 = document.createElement("td");
-      col2.innerText = data[i].priority;
-      let col3 = document.createElement("td");
-      col3.innerText = "Delete";
-      row.append(col1, col2, col3);
-      tbody.append(row);
-    }
-
-
-}
-
